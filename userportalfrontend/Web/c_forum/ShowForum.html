@@ -1,0 +1,17 @@
+<div class="container" ng-Controller="forumController">
+
+<h1 class="well"><center><font face="Monotype Corsiva">Forum Detail</font></center></h1>
+  
+  <div id="myblog" ng-repeat="forum in listForumData">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{forum.forumId}}">{{forum.forumName}}</button>
+  {{forum.likes}}<button class="btn btn-info" ng-click="incLikes(forum.forumId)">Likes</button>
+  <button type="button" class="btn btn-info" ng-click="blogComment(blog.blogId)">Forum Discussion</button>
+  <div id="{{forum.forumId}}" class="collapse">
+    {{blog.blogContent}}
+  </div>
+  </div>
+  
+
+
+
+</div>

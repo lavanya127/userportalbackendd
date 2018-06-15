@@ -1,0 +1,14 @@
+<div class="container" ng-Controller="BlogController">
+
+ <h1 class="well"><center><font face="Monotype Corsiva">Blog Detail</font></center></h1>
+  
+  <div id="myblog" ng-repeat="blog in allBlogData">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{blog.blogId}}">{{blog.blogName}}</button>
+  {{blog.likes}}<button class="btn btn-info" ng-click="incLikes(blog.blogId)">Likes</button>
+  <button type="button" class="btn btn-info" ng-click="blogComment(blog.blogId)">Blog Comment</button>
+  <div id="{{blog.blogId}}" class="collapse">
+    {{blog.blogContent}}
+  </div>
+  </div>
+  
+</div>

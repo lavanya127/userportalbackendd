@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class ="container" ng-controller="FriendController">
+<h1 class ="well"><center><front face="monotype corsiva">FriendList</front></center></h1>
+<table class ="table">
+<tr>
+<td>sL#</td>
+<td>Imge</td>
+<td>Friend Name</td>td>
+</tr>
+<tr ng-repet="friend in pendingFriendList">
+<td></td>
+<td></td>
+<td>{{friend.friendloginname}}</td>
+<td><button class ="btn btn-danger" ng-click="unfriend(friend.friend)">Unfriend</button>
+</tr>
+</table>
+</body>
+</html>

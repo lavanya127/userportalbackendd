@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class ="container" ng-Controller="FriendController">
+<h1 class = "well"><center><font face="monotype Corsia">Pending Friend List</font></center>
+<table class ="table">
+<tr>
+<td> SL#</td>
+<td> Image</td>
+<td></td>
+</tr>
+<tr ng-repeat="friend in pendingFriendList">
+<td></td>
+<td></td>
+<td>{{friend.userName}}</td>
+<td><button class="btn btn -info" ng-click="sendFriendReq(friend.Loginname)">Add Request</button>
+</table>
+</div>
+</body>
+</html>
